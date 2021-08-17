@@ -74,7 +74,7 @@ def soda_selection(inventory):
         print("Please choose from the following options:")
         index = 1
         for can in soda_options:
-            print("\n\tEnter -{index}- for {can} : ${can.price}")       ## i is changed to index
+            print(f"\n\tEnter -{index}- for {can} : ${can.price}")       ## i is changed to index
             index += 1 ##changed from i++
         user_selection = try_parse_int(input("Selection:"))
         validated_user_selection = validate_coin_choice(user_selection, soda_options)
@@ -113,7 +113,7 @@ def get_unique_can_names(inventory):
 
 def display_can_cost(selected_can):
     """Displays the name of a can and its price"""
-    print(f'The price of a {selected_can.price} is ${selected_can.price}')
+    print(f'The price of a {selected_can} is ${selected_can.price}')
 
 
 def display_payment_value(customer_payment):
