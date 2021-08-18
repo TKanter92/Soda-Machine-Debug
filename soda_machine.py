@@ -122,10 +122,10 @@ class SodaMachine:
             self.total_value += coin.value
         return round(self.total_value, 2)
 
-    def get_inventory_soda(self, selected_soda_name):
+    def get_inventory_soda(self, selected_soda):
         """Returns the first instance of a can whose name matches the selected_soda_name parameter"""
         for can in self.inventory:
-            if can.name == selected_soda_name:
+            if can.name == selected_soda:
                 self.inventory.remove(can)
                 return can
         return None
