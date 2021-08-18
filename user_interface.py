@@ -72,10 +72,10 @@ def soda_selection(inventory):
     soda_options = get_unique_can_names(inventory)
     while validated_user_selection[0] is False:
         print("Please choose from the following options:")
-        index = 1
+        i = 1
         for can in soda_options:
-            print(f"\n\tEnter -{index}- for {can} : ${can.price}")       ## i is changed to index
-            index += 1 ##changed from i++
+            print(f"\n\tEnter -{i}- for {can} : ${can.price}")       ## i is changed to index
+            i += 1 ##changed from i++
         user_selection = try_parse_int(input("Selection:"))
         validated_user_selection = validate_coin_choice(user_selection, soda_options)
     return validated_user_selection[1]

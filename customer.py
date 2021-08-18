@@ -8,6 +8,7 @@ class Customer:
         self.wallet = Wallet()
         self.backpack = Backpack()
 
+
     def gather_coins_from_wallet(self, selected_soda):
         """Method allowing user to choose coins from wallet for payment"""
         will_proceed = False
@@ -26,7 +27,7 @@ class Customer:
                 user_interface.output_text("You do not have any of those coins, try again")
         return customer_payment
 
-    def get_wallet_coin(self, coin_name):
+    def get_wallet_coin(self, coin):
         """Method responsible for retrieving a single coin from wallet's money list"""
         for coin in self.wallet.money:
             if coin.name == coin.name:
