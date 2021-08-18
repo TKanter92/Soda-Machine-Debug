@@ -10,7 +10,7 @@ class SodaMachine:
         self.inventory = []
         self.total_value = int()
         self.fill_inventory()
-        
+        self.fill_register()
 
     def fill_register(self):
         """Method will fill SodaMachine's register with certain amounts of each coin when called."""
@@ -44,7 +44,7 @@ class SodaMachine:
 
         selected_soda = self.get_inventory_soda(selected_soda_name)
 
-        customer_payment = customer.gather_coins_from_wallet(selected_soda_name)
+        customer_payment = customer.gather_coins_from_wallet(selected_soda)    
 
         self.calculate_transaction(customer_payment, selected_soda_name, customer)
 
